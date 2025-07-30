@@ -1,0 +1,19 @@
+pull_request_rules:
+    - name: backport to version-15
+      conditions:
+        - label="backport version-15"
+      actions:
+        backport:
+            branches:
+            - version-15
+            assignees:
+            - "{{ author }}"
+    
+
+    - name: delete head branch created by mergify after merge but not if other PRs depend on it
+      conditions:
+        - merged
+        - author=mergify[bot]
+      actions:
+        delete_head_branch:
+          force: false

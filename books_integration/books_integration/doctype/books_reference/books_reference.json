@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-13 16:26:55.566863",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_type",
+  "books_instance",
+  "column_break_mozr",
+  "document_name",
+  "books_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_mozr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_name",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Document Name",
+   "no_copy": 1,
+   "options": "document_type",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "books_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Books Name",
+   "no_copy": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "books_instance",
+   "fieldtype": "Link",
+   "label": "Books Instance",
+   "options": "Books Instance",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-17 15:42:21.361669",
+ "modified_by": "Administrator",
+ "module": "Books Integration",
+ "name": "Books Reference",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
